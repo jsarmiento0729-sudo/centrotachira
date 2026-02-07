@@ -1,43 +1,36 @@
 <template>
   <div class="page-container">
-    <h1 class="title">Oferta de Pregrado</h1>
-    <p class="subtitle">Conoce nuestras carreras de ingeniería, administración y más.</p>
+    <h1 class="title">Oferta de Postgrado</h1>
+    <p class="subtitle">Programas de maestría y especialización bajo la modalidad a distancia.</p>
 
     <div class="cards-grid">
       <div class="card">
-        <h2>Administración y Contaduría</h2>
+        <h2>Maestrías en Educación</h2>
         <ul>
-          <li>Administración de Empresas</li>
-          <li>Adm. de Empresas mención Riesgos y Seguros</li>
-          <li>Contaduría Pública</li>
-          <li>TSU en Contaduría</li>
+          <li>Mención Planificación de la Educación</li>
+          <li>Mención Administración Educativa</li>
+          <li>Educación Abierta y a Distancia</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>Ingeniería y Matemáticas</h2>
+        <h2>Administración</h2>
         <ul>
-          <li>Ingeniería de Sistemas</li>
-          <li>Ingeniería Industrial</li>
-          <li>Matemáticas</li>
-          <li>TSU en Higiene y Seguridad Industrial</li>
-          <li>TSU Mantenimiento de Sistemas Informático</li>
+          <li>Maestría en Administración de Negocios (MBA)</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>Educación</h2>
+        <h2>Especializaciones</h2>
         <ul>
-          <li>Educación Integral</li>
-          <li>Dificultades de Aprendizaje</li>
-          <li>Educación Matemáticas</li>
-          <li>Educación Inicial</li>
-          <li>TSU en Educación Integral</li>
+          <li>Telemática e Informática en Educación a Distancia</li>
+          <li>Derechos Humanos</li>
         </ul>
       </div>
     </div>
 
     <div class="inscription-section">
+      <p>Para más información sobre inscripciones:</p>
       <a href="http://www.unasec.com/" target="_blank" class="cta-button">
         Ir a página de inscripción
       </a>
@@ -81,6 +74,7 @@
 .card h2 {
   color: #0056b3;
   margin-top: 0;
+  font-size: 1.5em;
 }
 
 .card ul {
@@ -98,6 +92,11 @@
   padding: 20px;
   background-color: #eef2f5;
   border-radius: 8px;
+}
+
+.inscription-section p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
 }
 
 .cta-button {
