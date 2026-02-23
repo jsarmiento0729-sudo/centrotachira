@@ -2,12 +2,14 @@
   <section class="hero-slider">
     <button class="arrow-btn arrow-prev" @click="moveSlide(-1)">❮</button>
     <button class="arrow-btn arrow-next" @click="moveSlide(1)">❯</button>
+    
     <div class="slider-wrap" :style="{ transform: `translateX(-${sIdx * 100}%)` }">
-      <div class="slide" v-for="(slide, index) in slides" :key="index" :style="{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(${slide.img})` }">
-        <div class="slide-content">
-          <h2>{{ slide.title }}</h2>
-          <p>{{ slide.description }}</p>
-        </div>
+      <div 
+        class="slide" 
+        v-for="(slide, index) in slides" 
+        :key="index"
+      >
+        <img :src="slide.img" class="slide-image" alt="Flyer UNA">
       </div>
     </div>
   </section>
@@ -16,21 +18,10 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
-// --- RUTAS ACTUALIZADAS A LA CARPETA PUBLIC ---
 const slides = ref([
-  { 
-     // title: 'Estudia a tu Ritmo', 
-     // description: 'Educación universitaria de calidad sin fronteras.', 
-      // Asegúrate de incluir la extensión de archivo (ej: .jpg o .png)
-    img: '/carrusel/img1.jpg' 
-  },
-  { 
-   // title: 'Aula Virtual 24/7', 
-    //description: 'Accede a tus clases desde cualquier lugar.', 
-    img: '/carrusel/img2.jpg' 
-  }
+  { img: '/carrusel/img1.jpg' },
+  { img: '/carrusel/img2.jpg' }
 ]);
-// ----------------------------------------------
 
 const sIdx = ref(0);
 let intervalId;
@@ -40,7 +31,7 @@ function moveSlide(d) {
 }
 
 onMounted(() => {
-  intervalId = setInterval(() => moveSlide(1), 7000);
+  intervalId = setInterval(() => moveSlide(1), 8000);
 });
 
 onUnmounted(() => {
@@ -49,14 +40,52 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.hero-slider { position: relative; height: 500px; background: #000; overflow: hidden; }
-.slider-wrap { display: flex; height: 100%; transition: transform 0.6s ease-in-out; }
-.slide { min-width: 100%; height: 100%; background-size: cover; background-position: center; display: flex; align-items: center; }
-.slide-content { background: rgba(255,255,255,0.95); padding: 40px; margin-left: 8%; border-left: 8px solid var(--una-blue); max-width: 450px; }
-.arrow-btn { 
-  position: absolute; top: 50%; transform: translateY(-50%); 
-  background: rgba(0, 51, 153, 0.8); color: white; border: none; 
-  width: 45px; height: 45px; border-radius: 50%; cursor: pointer; z-index: 10; font-size: 1rem; 
+.hero-slider { 
+  position: relative; 
+  width: 100%; /* Ocupa todo el ancho disponible */
+  background-color: #f2f2f2; 
+  overflow: hidden; 
 }
-.arrow-prev { left: 20px; } .arrow-next { right: 20px; }
+
+.slider-wrap { 
+  display: flex; 
+  transition: transform 0.6s ease-in-out; 
+}
+
+.slide { 
+  min-width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.slide-image {
+  width: 100%; /* Fuerza a la imagen a ocupar todo el ancho */
+  height: auto; /* Ajusta la altura proporcionalmente para NO CORTAR nada */
+  max-height: 650px; /* Límite para que no se vea gigante en monitores grandes */
+  object-fit: cover; /* Mantiene la calidad visual */
+}
+
+.arrow-btn { 
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  background: rgba(0, 51, 153, 0.7); 
+  color: white; 
+  border: none; 
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  cursor: pointer; 
+  z-index: 10; 
+}
+
+.arrow-prev { left: 20px; } 
+.arrow-next { right: 20px; }
+
+@media (max-width: 768px) {
+  .slide-image {
+    max-height: 400px;
+  }
+}
 </style>
