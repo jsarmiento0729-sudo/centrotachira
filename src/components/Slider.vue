@@ -19,8 +19,8 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const slides = ref([
-  { img: '/carrusel/img1.jpg' },
-  { img: '/carrusel/img2.jpg' }
+  { img: '/carrusel/img1.png' },
+  { img: '/carrusel/img2.png' }
 ]);
 
 const sIdx = ref(0);
@@ -42,9 +42,9 @@ onUnmounted(() => {
 <style scoped>
 .hero-slider { 
   position: relative; 
-  width: 100%; /* Ocupa todo el ancho disponible */
-  background-color: #f2f2f2; 
+  width: 100%; 
   overflow: hidden; 
+  background-color: #f2f2f2;
 }
 
 .slider-wrap { 
@@ -54,16 +54,20 @@ onUnmounted(() => {
 
 .slide { 
   min-width: 100%; 
+  height: 580px; /* Altura fija del slider */
   display: flex; 
   justify-content: center; 
   align-items: center;
 }
 
 .slide-image {
-  width: 100%; /* Fuerza a la imagen a ocupar todo el ancho */
-  height: auto; /* Ajusta la altura proporcionalmente para NO CORTAR nada */
-  max-height: 650px; /* Límite para que no se vea gigante en monitores grandes */
-  object-fit: cover; /* Mantiene la calidad visual */
+  width: 100%; 
+  height: 100%; 
+  /* COVER expande la imagen para llenar todo el recuadro de 580px.
+     Si la imagen no es panorámica, recortará la parte superior e inferior. */
+  object-fit: cover; 
+  /* POSITION: CENTER asegura que el recorte sea parejo arriba y abajo */
+  object-position: center; 
 }
 
 .arrow-btn { 
@@ -84,8 +88,8 @@ onUnmounted(() => {
 .arrow-next { right: 20px; }
 
 @media (max-width: 768px) {
-  .slide-image {
-    max-height: 400px;
+  .slide {
+    height: 400px; /* Reducimos altura en móvil para que el cover no sea tan agresivo */
   }
 }
 </style>
