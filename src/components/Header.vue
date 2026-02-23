@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="top-bar">
-      <div>📍 Centro Local San Cristóbal | ⏰ 8:00 AM - 4:00 PM</div>
+      <div>📍 Centro Local San Cristóbal | viernes-sabado⏰ 8:00 AM - 4:00 PM</div>
       <div>{{ currentDate }}</div>
     </div>
 
@@ -18,7 +18,7 @@
           <span class="nav-link">UNA ▾</span>
           <ul class="dropdown">
             <li><router-link to="/sede-sc">Sede san cristobal</router-link></li>
-            <li><router-link to="/sede-col">Sede coloncito</router-link></li>
+            <li><router-link to="/sede-col">Unidad de apoyo coloncito</router-link></li>
           </ul>
         </div>
 
@@ -27,6 +27,7 @@
           <ul class="dropdown">
             <li><router-link to="/pregrado">Pregrado</router-link></li>
             <li><router-link to="/postgrado">Postgrado</router-link></li>
+            <li><router-link to="/correo">Correo y carga de asesores academicos</router-link></li>
             <li><router-link to="/extension">Extension universitaria</router-link></li>
           </ul>
         </div>
@@ -74,7 +75,6 @@
           <ul class="dropdown">
             <li><router-link to="/rc-pregrado">Pregrado</router-link></li>
             <li><router-link to="/rc-postgrado">Postgrado</router-link></li>
-            <li><router-link to="/materiales">Materiales a utilizar</router-link></li>
           </ul>
         </div>
       </nav>
@@ -96,7 +96,7 @@
         UNA ▾
         <div class="m-sub" :style="{ display: subOpenUNA ? 'block' : 'none' }">
           <router-link to="/sede-sc" @click="menuOpen = false">Sede San Cristóbal</router-link>
-          <router-link to="/sede-col" @click="menuOpen = false">Sede Coloncito</router-link>
+          <router-link to="/sede-col" @click="menuOpen = false">Unidad de apoyo Coloncito</router-link>
         </div>
       </div>
 
@@ -105,6 +105,7 @@
         <div class="m-sub" :style="{ display: subOpenOferta ? 'block' : 'none' }">
           <router-link to="/pregrado" @click="menuOpen = false">Pregrado</router-link>
           <router-link to="/postgrado" @click="menuOpen = false">Postgrado</router-link>
+          <router-link to="/correo" @click="menuOpen = false">Correo y carga de asesores academicos</router-link>
           <router-link to="/extension" @click="menuOpen = false">Extensión universitaria</router-link>
         </div>
       </div>

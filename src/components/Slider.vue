@@ -19,15 +19,15 @@ import { ref, onMounted, onUnmounted } from 'vue';
 // --- RUTAS ACTUALIZADAS A LA CARPETA PUBLIC ---
 const slides = ref([
   { 
-    title: 'Estudia a tu Ritmo', 
-    description: 'Educación universitaria de calidad sin fronteras.', 
-    // Asegúrate de incluir la extensión de archivo (ej: .jpg o .png)
-    img: '/carrusel/img1.png' 
+     // title: 'Estudia a tu Ritmo', 
+     // description: 'Educación universitaria de calidad sin fronteras.', 
+      // Asegúrate de incluir la extensión de archivo (ej: .jpg o .png)
+    img: '/carrusel/img1.jpg' 
   },
   { 
-    title: 'Aula Virtual 24/7', 
-    description: 'Accede a tus clases desde cualquier lugar.', 
-    img: '/carrusel/img2.png' 
+   // title: 'Aula Virtual 24/7', 
+    //description: 'Accede a tus clases desde cualquier lugar.', 
+    img: '/carrusel/img2.jpg' 
   }
 ]);
 // ----------------------------------------------
