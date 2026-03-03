@@ -19,9 +19,9 @@
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3414841975!2d-72.2289669!3d7.7561846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e666c640fee2b31%3A0x65828f96b8cd8c47!2sUniversidad%20Nacional%20Abierta!5e0!3m2!1ses-419!2sve!4v1708700000000!5m2!1ses-419!2sve" 
             width="100%" 
-            height="160" 
+            height="160"
             style="border:0; border-radius: 10px;" 
-            allowfullscreen="" 
+           
             loading="lazy">
           </iframe>
         </div>

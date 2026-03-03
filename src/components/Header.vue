@@ -47,7 +47,7 @@
           <ul class="dropdown">
             <li><router-link to="/admin-pregrado">Pregrado</router-link></li>
             <li><router-link to="/admin-postgrado">Postgrado</router-link></li>
-            <li><router-link to="/admin-extension">Extension universitaria</router-link></li>
+            <li><router-link to="/arancel_ext">Extension universitaria</router-link></li>
           </ul>
         </div>
 
@@ -125,7 +125,7 @@
         <div class="m-sub" :style="{ display: subOpenAdmin ? 'block' : 'none' }">
           <router-link to="/admin-pregrado" @click="menuOpen = false">Pregrado</router-link>
           <router-link to="/admin-postgrado" @click="menuOpen = false">Postgrado</router-link>
-          <router-link to="/admin-extension" @click="menuOpen = false">Extensión</router-link>
+          <router-link to="/arancel_ext" @click="menuOpen = false">Extensión</router-link>
         </div>
       </div>
 
