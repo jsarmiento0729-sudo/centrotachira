@@ -25,13 +25,12 @@
 import { ref } from 'vue';
 
 const newsItems = ref([
-  { title: 'Inscripciones', description: 'Proceso 2026-I abierto.', img: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=400' },
-  { title: 'Biblioteca', description: 'Recursos digitales disponibles.', img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400' },
-{ title: 'Inscripciones', description: 'Proceso 2026-I abierto.', img: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=400' },
-  { title: 'Biblioteca', description: 'Recursos digitales disponibles.', img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400' },
-  { title: 'Inscripciones', description: 'Proceso 2026-I abierto.', img: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=400' },
-  { title: 'Biblioteca', description: 'Recursos digitales disponibles.', img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=400' },
-  
+  { title: 'Inscripciones', description: 'Proceso 2026-I abierto.', img: '/IMG_0050.jpg' },
+  { title: 'Biblioteca', description: 'Recursos digitales disponibles.', img: '/IMG_0051.jpg' },
+  { title: 'Actividades', description: 'Actividades extracurriculares.', img: '/IMG_0052.jpg' },
+  { title: 'Orientación', description: 'Atención al estudiante.', img: '/IMG_0127 (1).jpg' },
+  { title: 'Deportes', description: 'Nuevos torneos interuniversitarios.', img: '/IMG_0123 (1).jpg' },
+  { title: 'Postgrados', description: 'Oferta especial de maestrías.', img: '/IMG_0122 (1).jpg' },
 ]);
 
 const nIdx = ref(0);

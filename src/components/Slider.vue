@@ -19,8 +19,9 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const slides = ref([
-  { img: '/carrusel/img1.png' },
-  { img: '/carrusel/img2.png' }
+  { img: '/IMG_0108.jpg' },
+  { img: '/IMG_0109.jpg' },
+  { img: '/IMG_0111.jpg' }
 ]);
 
 const sIdx = ref(0);

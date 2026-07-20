@@ -15,66 +15,48 @@
         <div class="nav-item"><router-link to="/" class="nav-link">Inicio</router-link></div>
         
         <div class="nav-item">
-          <span class="nav-link">UNA ▾</span>
+          <span class="nav-link">Registro y Control ▾</span>
           <ul class="dropdown">
-            <li><router-link to="/sede-sc">Sede san cristobal</router-link></li>
-            <li><router-link to="/sede-col">Unidad de apoyo coloncito</router-link></li>
+            <li class="dropdown-header">Admisión</li>
+            <li class="dropdown-header">Estudio Generales y Profesionales</li>
+            <li class="dropdown-header" style="color: #003399; font-weight: bold; padding: 10px 20px 5px;">Solicitudes:</li>
+            <li><a href="#">Autorización Funcionarios (FEUNA)</a></li>
+            <li><a href="#">Requisitos Solicitud De Certificado</a></li>
+            <li><a href="#">Certificado de Competencia</a></li>
+            <li><a href="#">Planilla Solicitud Documentos (PREGRADO)</a></li>
+            <li><a href="#">Reválida de Título</a></li>
           </ul>
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Oferta Académica ▾</span>
+          <span class="nav-link">Información ▾</span>
           <ul class="dropdown">
-            <li><router-link to="/pregrado">Pregrado</router-link></li>
-            <li><router-link to="/postgrado">Postgrado</router-link></li>
-            <li><router-link to="/correo">Correo y carga de asesores academicos</router-link></li>
-            <li><router-link to="/extension">Extension universitaria</router-link></li>
-          </ul>
-        </div>
-        
-        <div class="nav-item">
-          <span class="nav-link">Curso introductorio ▾</span>
-          <ul class="dropdown">
-            <li><router-link to="/lapso">lapso de inscripcion</router-link></li>
-            <li><router-link to="/requisitos">Requisitos</router-link></li>
-            <li><router-link to="/orientadores">Orientadores</router-link></li>
-            <li><router-link to="/recomendaciones">Recomendaciones</router-link></li>
+            <li><router-link to="/lapso">Curso Introductorio</router-link></li>
+            <li><a href="#">Inscripción Regular</a></li>
+            <li><a href="#">Proceso de Modificaciones</a></li>
+            <li><a href="#">Proceso Retiro y Adición</a></li>
+            <li><a href="#">Inscripción Prueba Suficiencia Ingles</a></li>
+            <li><a href="#">Directorio de los Centros Locales</a></li>
+            <li><a href="#">Bancos Autorizados</a></li>
+            <li><router-link to="/orientadores">Directorio Orientadores</router-link></li>
           </ul>
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">ADMINISTRACION Y ARANCELES ▾</span>
+          <span class="nav-link">Aranceles ▾</span>
           <ul class="dropdown">
-            <li><router-link to="/admin-pregrado">Pregrado</router-link></li>
-            <li><router-link to="/admin-postgrado">Postgrado</router-link></li>
-            <li><router-link to="/arancel_ext">Extension universitaria</router-link></li>
+            <li><router-link to="/admin-pregrado">Aranceles Pregrado</router-link></li>
+            <li><a href="#">Aranceles Equivalencia</a></li>
+            <li><router-link to="/admin-postgrado">Aranceles Postgrado</router-link></li>
           </ul>
         </div>
 
         <div class="nav-item">
-          <span class="nav-link">Evaluacion ▾</span>
+          <span class="nav-link">Grado y Postgrado ▾</span>
           <ul class="dropdown">
-            <li><router-link to="/calendario">Calendario</router-link></li>
-            <li><router-link to="/diseno">subprograma de diseño</router-link></li>
-            <li><router-link to="/resultados">Resultados de evaluacion</router-link></li>
-          </ul>
-        </div>
-
-        <div class="nav-item">
-          <span class="nav-link">servicio al estudiante ▾</span>
-          <ul class="dropdown">
-            <li><router-link to="/alma-mater">Alma mater</router-link></li>
-            <li><router-link to="/biblioteca">Biblioteca</router-link></li>
-            <li><router-link to="/fames">Fames</router-link></li>
-            <li><router-link to="/becas">Becas y ayudantias</router-link></li>
-          </ul>
-        </div>
-        
-        <div class="nav-item">
-          <span class="nav-link">Registro y control de estudio ▾</span>
-          <ul class="dropdown">
-            <li><router-link to="/rc-pregrado">Pregrado</router-link></li>
-            <li><router-link to="/rc-postgrado">Postgrado</router-link></li>
+            <li class="dropdown-header" style="color: #003399; font-weight: bold; padding: 10px 20px 5px;">Solicitudes:</li>
+            <li><a href="#">Conferimiento de Título</a></li>
+            <li><a href="#">Planilla Solicitud Documentos (Egresados)</a></li>
           </ul>
         </div>
       </nav>
@@ -93,67 +75,48 @@
       <router-link to="/" class="m-item" @click="menuOpen = false">INICIO</router-link>
 
       <div class="m-item" @click="subOpenUNA = !subOpenUNA">
-        UNA ▾
+        REGISTRO Y CONTROL ▾
         <div class="m-sub" :style="{ display: subOpenUNA ? 'block' : 'none' }">
-          <router-link to="/sede-sc" @click="menuOpen = false">Sede San Cristóbal</router-link>
-          <router-link to="/sede-col" @click="menuOpen = false">Unidad de apoyo Coloncito</router-link>
+          <a href="#" @click="menuOpen = false">Admisión</a>
+          <a href="#" @click="menuOpen = false">Estudio Generales y Profesionales</a>
+          <div style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Solicitudes:</div>
+          <a href="#" @click="menuOpen = false">Autorización Funcionarios</a>
+          <a href="#" @click="menuOpen = false">Requisitos Certificado</a>
+          <a href="#" @click="menuOpen = false">Certificado de Competencia</a>
+          <a href="#" @click="menuOpen = false">Planilla Documentos (PREGRADO)</a>
+          <a href="#" @click="menuOpen = false">Reválida de Título</a>
         </div>
       </div>
 
       <div class="m-item" @click="subOpenOferta = !subOpenOferta">
-        OFERTA ACADÉMICA ▾
+        INFORMACIÓN ▾
         <div class="m-sub" :style="{ display: subOpenOferta ? 'block' : 'none' }">
-          <router-link to="/pregrado" @click="menuOpen = false">Pregrado</router-link>
-          <router-link to="/postgrado" @click="menuOpen = false">Postgrado</router-link>
-          <router-link to="/correo" @click="menuOpen = false">Correo y carga de asesores academicos</router-link>
-          <router-link to="/extension" @click="menuOpen = false">Extensión universitaria</router-link>
-        </div>
-      </div>
-
-      <div class="m-item" @click="subOpenCurso = !subOpenCurso">
-        CURSO INTRODUCTORIO ▾
-        <div class="m-sub" :style="{ display: subOpenCurso ? 'block' : 'none' }">
-          <router-link to="/lapso" @click="menuOpen = false">Lapso de inscripción</router-link>
-          <router-link to="/requisitos" @click="menuOpen = false">Requisitos</router-link>
-          <router-link to="/orientadores" @click="menuOpen = false">Orientadores</router-link>
-          <router-link to="/recomendaciones" @click="menuOpen = false">Recomendaciones</router-link>
+          <router-link to="/lapso" @click="menuOpen = false">Curso Introductorio</router-link>
+          <a href="#" @click="menuOpen = false">Inscripción Regular</a>
+          <a href="#" @click="menuOpen = false">Proceso de Modificaciones</a>
+          <a href="#" @click="menuOpen = false">Proceso Retiro y Adición</a>
+          <a href="#" @click="menuOpen = false">Inscripción Prueba Suficiencia Ingles</a>
+          <a href="#" @click="menuOpen = false">Directorio de los Centros Locales</a>
+          <a href="#" @click="menuOpen = false">Bancos Autorizados</a>
+          <router-link to="/orientadores" @click="menuOpen = false">Directorio Orientadores</router-link>
         </div>
       </div>
 
       <div class="m-item" @click="subOpenAdmin = !subOpenAdmin">
-        ADMINISTRACIÓN ▾
+        ARANCELES ▾
         <div class="m-sub" :style="{ display: subOpenAdmin ? 'block' : 'none' }">
-          <router-link to="/admin-pregrado" @click="menuOpen = false">Pregrado</router-link>
-          <router-link to="/admin-postgrado" @click="menuOpen = false">Postgrado</router-link>
-          <router-link to="/arancel_ext" @click="menuOpen = false">Extensión</router-link>
+          <router-link to="/admin-pregrado" @click="menuOpen = false">Aranceles Pregrado</router-link>
+          <a href="#" @click="menuOpen = false">Aranceles Equivalencia</a>
+          <router-link to="/admin-postgrado" @click="menuOpen = false">Aranceles Postgrado</router-link>
         </div>
       </div>
 
       <div class="m-item" @click="subOpenEval = !subOpenEval">
-        EVALUACIÓN ▾
+        GRADO Y POSTGRADO ▾
         <div class="m-sub" :style="{ display: subOpenEval ? 'block' : 'none' }">
-          <router-link to="/calendario" @click="menuOpen = false">Calendario</router-link>
-          <router-link to="/diseno" @click="menuOpen = false">Subprograma de diseño</router-link>
-          <router-link to="/resultados" @click="menuOpen = false">Resultados</router-link>
-        </div>
-      </div>
-
-      <div class="m-item" @click="subOpenServ = !subOpenServ">
-        SERVICIO AL ESTUDIANTE ▾
-        <div class="m-sub" :style="{ display: subOpenServ ? 'block' : 'none' }">
-          <router-link to="/alma-mater" @click="menuOpen = false">Alma mater</router-link>
-          <router-link to="/biblioteca" @click="menuOpen = false">Biblioteca</router-link>
-          <router-link to="/fames" @click="menuOpen = false">Fames</router-link>
-          <router-link to="/becas" @click="menuOpen = false">Becas y ayudantías</router-link>
-        </div>
-      </div>
-
-      <div class="m-item" @click="subOpenReg = !subOpenReg">
-        REGISTRO Y CONTROL ▾
-        <div class="m-sub" :style="{ display: subOpenReg ? 'block' : 'none' }">
-          <router-link to="/rc-pregrado" @click="menuOpen = false">Pregrado</router-link>
-          <router-link to="/rc-postgrado" @click="menuOpen = false">Postgrado</router-link>
-          <router-link to="/materiales" @click="menuOpen = false">Materiales</router-link>
+          <div style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Solicitudes:</div>
+          <a href="#" @click="menuOpen = false">Conferimiento de Título</a>
+          <a href="#" @click="menuOpen = false">Planilla Documentos (Egresados)</a>
         </div>
       </div>
       

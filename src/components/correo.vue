@@ -11,7 +11,7 @@
           <h3>📄 Información Detallada</h3>
           <p>Acceda al listado completo de correos de asesores por asignatura y la distribución de carga académica para todas las carreras.</p>
         </div>
-        <a href="/CARGA_ACADEMICA.pdf" target="_blank" class="btn-download">
+        <a href="/Carga_Academica_2026_2.pdf" target="_blank" class="btn-download">
           VER INFORMACIÓN DETALLADA
         </a>
       </div>
