@@ -12,57 +12,66 @@
       </router-link>
       
       <nav class="nav-desktop">
-        <div class="nav-item"><router-link to="/" class="nav-link">Inicio</router-link></div>
+        <div class="nav-item"><router-link to="/" class="nav-link" @click="closeAll">Inicio</router-link></div>
         
-        <div class="nav-item">
-          <span class="nav-link">Registro y Control ▾</span>
-          <ul class="dropdown">
+        <!-- Registro y Control -->
+        <div class="nav-item" @click.stop="toggle('registro')">
+          <span class="nav-link" :class="{ active: openMenu === 'registro' }">Registro y Control ▾</span>
+          <ul class="dropdown" :class="{ open: openMenu === 'registro' }">
             <li class="dropdown-header">Admisión</li>
             <li class="dropdown-header">Estudio Generales y Profesionales</li>
-            <li class="dropdown-header" style="color: #003399; font-weight: bold; padding: 10px 20px 5px;">Solicitudes:</li>
-            <li><a href="#">Autorización Funcionarios (FEUNA)</a></li>
-            <li><a href="#">Requisitos Solicitud De Certificado</a></li>
-            <li><a href="#">Certificado de Competencia</a></li>
-            <li><a href="#">Planilla Solicitud Documentos (PREGRADO)</a></li>
-            <li><a href="#">Reválida de Título</a></li>
+            <li class="dropdown-header sol">Solicitudes:</li>
+            <li><a href="/AUTORIZA_FE-UNA.pdf" target="_blank" @click.stop="closeAll">Autorización Funcionarios (FEUNA)</a></li>
+            <li><a href="/REQUISITOS_SOLICITUD_CERTIFICADOS_COMPETENCIA.pdf" target="_blank" @click.stop="closeAll">Requisitos Solicitud De Certificado</a></li>
+            <li><a href="/REQUISITOS_SOLICITUD_CERTIFICADOS_COMPETENCIA.pdf" target="_blank" @click.stop="closeAll">Certificado de Competencia</a></li>
+            <li><a href="/SOLICITUD_DE_DOC.pdf" target="_blank" @click.stop="closeAll">Planilla Solicitud Documentos (PREGRADO)</a></li>
+            <li><a href="/Revalida.pdf" target="_blank" @click.stop="closeAll">Reválida de Título</a></li>
           </ul>
         </div>
 
-        <div class="nav-item">
-          <span class="nav-link">Información ▾</span>
-          <ul class="dropdown">
-            <li><router-link to="/lapso">Curso Introductorio</router-link></li>
-            <li><a href="#">Inscripción Regular</a></li>
-            <li><a href="#">Proceso de Modificaciones</a></li>
-            <li><a href="#">Proceso Retiro y Adición</a></li>
-            <li><a href="#">Inscripción Prueba Suficiencia Ingles</a></li>
-            <li><a href="#">Directorio de los Centros Locales</a></li>
-            <li><a href="#">Bancos Autorizados</a></li>
-            <li><router-link to="/orientadores">Directorio Orientadores</router-link></li>
+        <!-- Información -->
+        <div class="nav-item" @click.stop="toggle('info')">
+          <span class="nav-link" :class="{ active: openMenu === 'info' }">Información ▾</span>
+          <ul class="dropdown" :class="{ open: openMenu === 'info' }">
+            <li><router-link to="/lapso" @click="closeAll">Curso Introductorio</router-link></li>
+            <li><a href="/instru_est_20261_final.pdf" target="_blank" @click.stop="closeAll">Inscripción Regular</a></li>
+            <li><a href="/Modi_est.pdf" target="_blank" @click.stop="closeAll">Proceso de Modificaciones</a></li>
+            <li><a href="/INSTRUC_ADICION_RETIRO.pdf" target="_blank" @click.stop="closeAll">Proceso Retiro y Adición</a></li>
+            <li><a href="/instru_sufi_20261.pdf" target="_blank" @click.stop="closeAll">Inscripción Prueba Suficiencia Inglés</a></li>
+            <li><a href="/SEGUNDA_REFORMULACION_DEL_CRONOGRAMA_INTEGRADO_A%C3%91O_2026_PAPEL_DE%20(1).pdf" target="_blank" @click.stop="closeAll">Cronograma Integrado 2026</a></li>
+            <li><a href="/Directorio_Centros_Locales.pdf" target="_blank" @click.stop="closeAll">Directorio de los Centros Locales</a></li>
+            <li><a href="/BANCOS_AUTORIZADOS_UNA.pdf" target="_blank" @click.stop="closeAll">Bancos Autorizados</a></li>
+            <li><router-link to="/orientadores" @click="closeAll">Directorio Orientadores</router-link></li>
+            <li><router-link to="/correo" @click="closeAll">Carga Académica y Correos</router-link></li>
           </ul>
         </div>
 
-        <div class="nav-item">
-          <span class="nav-link">Aranceles ▾</span>
-          <ul class="dropdown">
-            <li><router-link to="/admin-pregrado">Aranceles Pregrado</router-link></li>
-            <li><a href="#">Aranceles Equivalencia</a></li>
-            <li><router-link to="/admin-postgrado">Aranceles Postgrado</router-link></li>
+        <!-- Aranceles -->
+        <div class="nav-item" @click.stop="toggle('aranceles')">
+          <span class="nav-link" :class="{ active: openMenu === 'aranceles' }">Aranceles ▾</span>
+          <ul class="dropdown" :class="{ open: openMenu === 'aranceles' }">
+            <li><router-link to="/admin-pregrado" @click="closeAll">Aranceles Pregrado</router-link></li>
+            <li><a href="/Aranceles%20Equivalencias%20Resol0510_290426.pdf" target="_blank" @click.stop="closeAll">Aranceles Equivalencia</a></li>
+            <li><router-link to="/admin-postgrado" @click="closeAll">Aranceles Postgrado</router-link></li>
           </ul>
         </div>
 
-        <div class="nav-item">
-          <span class="nav-link">Grado y Postgrado ▾</span>
-          <ul class="dropdown">
-            <li class="dropdown-header" style="color: #003399; font-weight: bold; padding: 10px 20px 5px;">Solicitudes:</li>
-            <li><a href="#">Conferimiento de Título</a></li>
-            <li><a href="#">Planilla Solicitud Documentos (Egresados)</a></li>
+        <!-- Grado y Postgrado -->
+        <div class="nav-item" @click.stop="toggle('grado')">
+          <span class="nav-link" :class="{ active: openMenu === 'grado' }">Grado y Postgrado ▾</span>
+          <ul class="dropdown" :class="{ open: openMenu === 'grado' }">
+            <li class="dropdown-header sol">Solicitudes:</li>
+            <li><a href="/PlanillaConferimientodetitulo.pdf" target="_blank" @click.stop="closeAll">Conferimiento de Título</a></li>
+            <li><a href="/SOLICITUD_GRADO.pdf" target="_blank" @click.stop="closeAll">Planilla Solicitud Documentos (Egresados)</a></li>
           </ul>
         </div>
       </nav>
       
-      <button class="hamb-btn" @click="menuOpen = true">☰</button>
+      <button class="hamb-btn" @click.stop="menuOpen = true">☰</button>
     </div>
+
+    <!-- Overlay invisible para cerrar menú desktop al hacer clic afuera -->
+    <div v-if="openMenu" class="desktop-overlay" @click="closeAll"></div>
 
     <div class="overlay" :class="{ 'active': menuOpen }" @click="menuOpen = false"></div>
     
@@ -80,11 +89,11 @@
           <a href="#" @click="menuOpen = false">Admisión</a>
           <a href="#" @click="menuOpen = false">Estudio Generales y Profesionales</a>
           <div style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Solicitudes:</div>
-          <a href="#" @click="menuOpen = false">Autorización Funcionarios</a>
-          <a href="#" @click="menuOpen = false">Requisitos Certificado</a>
-          <a href="#" @click="menuOpen = false">Certificado de Competencia</a>
-          <a href="#" @click="menuOpen = false">Planilla Documentos (PREGRADO)</a>
-          <a href="#" @click="menuOpen = false">Reválida de Título</a>
+          <a href="/AUTORIZA_FE-UNA.pdf" target="_blank" @click.stop="menuOpen = false">Autorización Funcionarios</a>
+          <a href="/REQUISITOS_SOLICITUD_CERTIFICADOS_COMPETENCIA.pdf" target="_blank" @click.stop="menuOpen = false">Requisitos Certificado</a>
+          <a href="/REQUISITOS_SOLICITUD_CERTIFICADOS_COMPETENCIA.pdf" target="_blank" @click.stop="menuOpen = false">Certificado de Competencia</a>
+          <a href="/SOLICITUD_DE_DOC.pdf" target="_blank" @click.stop="menuOpen = false">Planilla Documentos (PREGRADO)</a>
+          <a href="/Revalida.pdf" target="_blank" @click.stop="menuOpen = false">Reválida de Título</a>
         </div>
       </div>
 
@@ -92,13 +101,15 @@
         INFORMACIÓN ▾
         <div class="m-sub" :style="{ display: subOpenOferta ? 'block' : 'none' }">
           <router-link to="/lapso" @click="menuOpen = false">Curso Introductorio</router-link>
-          <a href="#" @click="menuOpen = false">Inscripción Regular</a>
-          <a href="#" @click="menuOpen = false">Proceso de Modificaciones</a>
-          <a href="#" @click="menuOpen = false">Proceso Retiro y Adición</a>
-          <a href="#" @click="menuOpen = false">Inscripción Prueba Suficiencia Ingles</a>
-          <a href="#" @click="menuOpen = false">Directorio de los Centros Locales</a>
-          <a href="#" @click="menuOpen = false">Bancos Autorizados</a>
+          <a href="/instru_est_20261_final.pdf" target="_blank" @click.stop="menuOpen = false">Inscripción Regular</a>
+          <a href="/Modi_est.pdf" target="_blank" @click.stop="menuOpen = false">Proceso de Modificaciones</a>
+          <a href="/INSTRUC_ADICION_RETIRO.pdf" target="_blank" @click.stop="menuOpen = false">Proceso Retiro y Adición</a>
+          <a href="/instru_sufi_20261.pdf" target="_blank" @click.stop="menuOpen = false">Inscripción Prueba Suficiencia Inglés</a>
+          <a href="/SEGUNDA_REFORMULACION_DEL_CRONOGRAMA_INTEGRADO_A%C3%91O_2026_PAPEL_DE%20(1).pdf" target="_blank" @click.stop="menuOpen = false">Cronograma Integrado 2026</a>
+          <a href="/Directorio_Centros_Locales.pdf" target="_blank" @click.stop="menuOpen = false">Directorio de los Centros Locales</a>
+          <a href="/BANCOS_AUTORIZADOS_UNA.pdf" target="_blank" @click.stop="menuOpen = false">Bancos Autorizados</a>
           <router-link to="/orientadores" @click="menuOpen = false">Directorio Orientadores</router-link>
+          <router-link to="/correo" @click="menuOpen = false">Carga Académica y Correos</router-link>
         </div>
       </div>
 
@@ -106,7 +117,7 @@
         ARANCELES ▾
         <div class="m-sub" :style="{ display: subOpenAdmin ? 'block' : 'none' }">
           <router-link to="/admin-pregrado" @click="menuOpen = false">Aranceles Pregrado</router-link>
-          <a href="#" @click="menuOpen = false">Aranceles Equivalencia</a>
+          <a href="/Aranceles%20Equivalencias%20Resol0510_290426.pdf" target="_blank" @click.stop="menuOpen = false">Aranceles Equivalencia</a>
           <router-link to="/admin-postgrado" @click="menuOpen = false">Aranceles Postgrado</router-link>
         </div>
       </div>
@@ -115,8 +126,8 @@
         GRADO Y POSTGRADO ▾
         <div class="m-sub" :style="{ display: subOpenEval ? 'block' : 'none' }">
           <div style="font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Solicitudes:</div>
-          <a href="#" @click="menuOpen = false">Conferimiento de Título</a>
-          <a href="#" @click="menuOpen = false">Planilla Documentos (Egresados)</a>
+          <a href="/PlanillaConferimientodetitulo.pdf" target="_blank" @click.stop="menuOpen = false">Conferimiento de Título</a>
+          <a href="/SOLICITUD_GRADO.pdf" target="_blank" @click.stop="menuOpen = false">Planilla Documentos (Egresados)</a>
         </div>
       </div>
       
@@ -125,29 +136,42 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const menuOpen = ref(false);
 const currentDate = ref('');
+const openMenu = ref(null);
 
-// Variables separadas para cada submenú móvil
 const subOpenUNA = ref(false);
 const subOpenOferta = ref(false);
-const subOpenCurso = ref(false);
 const subOpenAdmin = ref(false);
 const subOpenEval = ref(false);
-const subOpenServ = ref(false);
-const subOpenReg = ref(false);
+
+function toggle(name) {
+  openMenu.value = openMenu.value === name ? null : name;
+}
+
+function closeAll() {
+  openMenu.value = null;
+}
+
+function handleDocClick() {
+  closeAll();
+}
 
 onMounted(() => {
   currentDate.value = new Date().toLocaleDateString('es-ES', { 
     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' 
   });
+  document.addEventListener('click', handleDocClick);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleDocClick);
 });
 </script>
 
 <style scoped>
-/* ... (Tus estilos CSS originales se mantienen igual) ... */
 .top-bar {
   background: #333; color: white; font-size: 0.75rem;
   padding: 10px 5%; display: flex; justify-content: space-between; align-items: center;
@@ -168,20 +192,61 @@ header {
 .nav-link { 
   padding: 35px 10px; text-decoration: none; color: #333; 
   font-size: 0.6rem; font-weight: 700; text-transform: uppercase; display: block;
-  cursor: pointer;
+  cursor: pointer; user-select: none;
+  transition: color 0.2s, background 0.2s;
 }
-.nav-link:hover { color: #003399; background: #f0f7ff; }
+.nav-link:hover, .nav-link.active { color: #003399; background: #f0f7ff; }
+
+/* ── Dropdown: mostrado con clase .open en vez de :hover ── */
 .dropdown { 
   position: absolute; top: 100%; left: 0; background: white; 
-  min-width: 220px; display: none; list-style: none; 
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1); border-top: 3px solid #003399; 
+  min-width: 260px;
+  list-style: none; 
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border-top: 3px solid #003399;
+  border-radius: 0 0 8px 8px;
+  display: none;
+  z-index: 1100;
+  animation: fadeDown 0.15s ease;
 }
-.nav-item:hover .dropdown { display: block; }
-.dropdown a { 
+.dropdown.open { display: block; }
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown li a { 
   padding: 12px 20px; display: block; text-decoration: none; 
-  color: #555; font-size: 0.75rem; border-bottom: 1px solid #eee; 
+  color: #555; font-size: 0.78rem; border-bottom: 1px solid #eee; 
+  transition: background 0.15s, color 0.15s;
 }
-.dropdown a:hover { background: #003399; color: white; }
+.dropdown li a:hover { background: #003399; color: white; }
+
+.dropdown-header {
+  padding: 8px 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: #f8fafc;
+  border-bottom: 1px solid #eee;
+  cursor: default;
+}
+.dropdown-header.sol {
+  color: #003399;
+  font-weight: 700;
+  padding: 10px 20px 5px;
+}
+
+/* Overlay invisible para cerrar al hacer clic afuera */
+.desktop-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1050;
+  background: transparent;
+}
+
 .hamb-btn { display: none; background: none; border: none; font-size: 2rem; color: #003399; cursor: pointer; }
 .mobile-aside { 
   position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; 
@@ -197,6 +262,7 @@ header {
 .m-item { border-bottom: 1px solid #eee; padding: 15px 0; font-weight: 700; color: #003399; font-size: 0.9rem; cursor:pointer; text-decoration:none; display:block;}
 .m-sub { display: none; padding-left: 15px; margin-top: 10px; background-color: #f9f9f9;}
 .m-sub a { display: block; padding: 8px 0; text-decoration: none; color: #666; font-size: 0.85rem; border-bottom: 1px solid #eee; }
+.m-sub a:hover { color: #003399; }
 @media (max-width: 1200px) {
   .nav-desktop { display: none; }
   .hamb-btn { display: block; }
