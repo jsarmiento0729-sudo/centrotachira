@@ -113,7 +113,7 @@
               <span>🔄 Segunda Reformulación</span>
             </div>
           </div>
-          <a href="/SEGUNDA_REFORMULACION_DEL_CRONOGRAMA_INTEGRADO_A%C3%91O_2026_PAPEL_DE%20(1).pdf" target="_blank" class="btn-doc red">
+          <a href="/CRONOGRAMA_INTEGRADO_2026.pdf" target="_blank" class="btn-doc red">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>

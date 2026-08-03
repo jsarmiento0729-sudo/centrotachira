@@ -62,7 +62,7 @@
       <div class="quick-links-section">
         <h3>Documentos Relacionados</h3>
         <div class="quick-links-grid">
-          <a href="/Aranceles%20Equivalencias%20Resol0510_290426.pdf" target="_blank" class="quick-link-card">
+          <a href="/Aranceles_Equivalencias_Resol0510_290426.pdf" target="_blank" class="quick-link-card">
             <span class="ql-icon">📄</span>
             <div>
               <strong>Aranceles Equivalencias</strong>

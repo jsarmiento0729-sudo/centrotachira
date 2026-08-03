@@ -11,7 +11,7 @@
           <h3>📄 Carga Académica 2026-2 — CL Táchira</h3>
           <p>Listado de correos de asesores y distribución de carga académica para el Centro Local Táchira.</p>
         </div>
-        <a href="/carga%20academica%202026%2002%20pdf.pdf" target="_blank" class="btn-download">
+        <a href="/carga_academica_2026_02.pdf" target="_blank" class="btn-download">
           VER PDF
         </a>
       </div>
@@ -21,7 +21,7 @@
           <h3>📄 Carga Académica 2026-2 — UA Coloncito</h3>
           <p>Distribución de carga académica para la Unidad de Apoyo Coloncito.</p>
         </div>
-        <a href="/carga%20academica%202026%2002%20coloncito.pdf" target="_blank" class="btn-download" style="background: #005500;">
+        <a href="/carga_academica_2026_02_coloncito.pdf" target="_blank" class="btn-download" style="background: #005500;">
           VER PDF
         </a>
       </div>
@@ -31,7 +31,7 @@
           <h3>📄 Correos Asesores — CL Táchira</h3>
           <p>Directorio completo de correos electrónicos de asesores por asignatura.</p>
         </div>
-        <a href="/CORREOS%20CL%20TACHIRA.pdf" target="_blank" class="btn-download" style="background: #660000;">
+        <a href="/CORREOS_CL_TACHIRA.pdf" target="_blank" class="btn-download" style="background: #660000;">
           VER PDF
         </a>
       </div>
@@ -41,7 +41,7 @@
           <h3>📄 Correos Asesores — UA Coloncito</h3>
           <p>Directorio de correos electrónicos de asesores de la Unidad de Apoyo Coloncito.</p>
         </div>
-        <a href="/CORREOS%20U.A.%20COLONCITO.pdf" target="_blank" class="btn-download" style="background: #884400;">
+        <a href="/CORREOS_U.A._COLONCITO.pdf" target="_blank" class="btn-download" style="background: #884400;">
           VER PDF
         </a>
       </div>

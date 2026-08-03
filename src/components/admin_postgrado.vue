@@ -31,14 +31,14 @@
           </div>
         </div>
         <div class="pdf-hero-actions">
-          <a href="/Aranceles%20Postgrado%20Resol%200510_290426.pdf" target="_blank" class="btn-primary">
+          <a href="/Aranceles_Postgrado_Resol_0510_290426.pdf" target="_blank" class="btn-primary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
               <circle cx="12" cy="12" r="3"/>
             </svg>
             Ver Aranceles PDF
           </a>
-          <a href="/Aranceles%20Postgrado%20Resol%200510_290426.pdf" download class="btn-secondary">
+          <a href="/Aranceles_Postgrado_Resol_0510_290426.pdf" download class="btn-secondary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -100,7 +100,7 @@
               <p>Resolución 0510 — Pregrado</p>
             </div>
           </a>
-          <a href="/Aranceles%20Equivalencias%20Resol0510_290426.pdf" target="_blank" class="quick-link-card">
+          <a href="/Aranceles_Equivalencias_Resol0510_290426.pdf" target="_blank" class="quick-link-card">
             <span class="ql-icon">📄</span>
             <div>
               <strong>Aranceles Equivalencias</strong>

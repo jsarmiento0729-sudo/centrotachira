@@ -38,7 +38,7 @@
             <li><a href="/Modi_est.pdf" target="_blank" @click.stop="closeAll">Proceso de Modificaciones</a></li>
             <li><a href="/INSTRUC_ADICION_RETIRO.pdf" target="_blank" @click.stop="closeAll">Proceso Retiro y Adición</a></li>
             <li><a href="/instru_sufi_20261.pdf" target="_blank" @click.stop="closeAll">Inscripción Prueba Suficiencia Inglés</a></li>
-            <li><a href="/SEGUNDA_REFORMULACION_DEL_CRONOGRAMA_INTEGRADO_A%C3%91O_2026_PAPEL_DE%20(1).pdf" target="_blank" @click.stop="closeAll">Cronograma Integrado 2026</a></li>
+            <li><a href="/CRONOGRAMA_INTEGRADO_2026.pdf" target="_blank" @click.stop="closeAll">Cronograma Integrado 2026</a></li>
             <li><a href="/Directorio_Centros_Locales.pdf" target="_blank" @click.stop="closeAll">Directorio de los Centros Locales</a></li>
             <li><a href="/BANCOS_AUTORIZADOS_UNA.pdf" target="_blank" @click.stop="closeAll">Bancos Autorizados</a></li>
             <li><router-link to="/orientadores" @click="closeAll">Directorio Orientadores</router-link></li>
@@ -51,7 +51,7 @@
           <span class="nav-link" :class="{ active: openMenu === 'aranceles' }">Aranceles ▾</span>
           <ul class="dropdown" :class="{ open: openMenu === 'aranceles' }">
             <li><router-link to="/admin-pregrado" @click="closeAll">Aranceles Pregrado</router-link></li>
-            <li><a href="/Aranceles%20Equivalencias%20Resol0510_290426.pdf" target="_blank" @click.stop="closeAll">Aranceles Equivalencia</a></li>
+            <li><a href="/Aranceles_Equivalencias_Resol0510_290426.pdf" target="_blank" @click.stop="closeAll">Aranceles Equivalencia</a></li>
             <li><router-link to="/admin-postgrado" @click="closeAll">Aranceles Postgrado</router-link></li>
           </ul>
         </div>
@@ -105,7 +105,7 @@
           <a href="/Modi_est.pdf" target="_blank" @click.stop="menuOpen = false">Proceso de Modificaciones</a>
           <a href="/INSTRUC_ADICION_RETIRO.pdf" target="_blank" @click.stop="menuOpen = false">Proceso Retiro y Adición</a>
           <a href="/instru_sufi_20261.pdf" target="_blank" @click.stop="menuOpen = false">Inscripción Prueba Suficiencia Inglés</a>
-          <a href="/SEGUNDA_REFORMULACION_DEL_CRONOGRAMA_INTEGRADO_A%C3%91O_2026_PAPEL_DE%20(1).pdf" target="_blank" @click.stop="menuOpen = false">Cronograma Integrado 2026</a>
+          <a href="/CRONOGRAMA_INTEGRADO_2026.pdf" target="_blank" @click.stop="menuOpen = false">Cronograma Integrado 2026</a>
           <a href="/Directorio_Centros_Locales.pdf" target="_blank" @click.stop="menuOpen = false">Directorio de los Centros Locales</a>
           <a href="/BANCOS_AUTORIZADOS_UNA.pdf" target="_blank" @click.stop="menuOpen = false">Bancos Autorizados</a>
           <router-link to="/orientadores" @click="menuOpen = false">Directorio Orientadores</router-link>
@@ -117,7 +117,7 @@
         ARANCELES ▾
         <div class="m-sub" :style="{ display: subOpenAdmin ? 'block' : 'none' }">
           <router-link to="/admin-pregrado" @click="menuOpen = false">Aranceles Pregrado</router-link>
-          <a href="/Aranceles%20Equivalencias%20Resol0510_290426.pdf" target="_blank" @click.stop="menuOpen = false">Aranceles Equivalencia</a>
+          <a href="/Aranceles_Equivalencias_Resol0510_290426.pdf" target="_blank" @click.stop="menuOpen = false">Aranceles Equivalencia</a>
           <router-link to="/admin-postgrado" @click="menuOpen = false">Aranceles Postgrado</router-link>
         </div>
       </div>
